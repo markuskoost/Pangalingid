@@ -22,7 +22,9 @@ $total = 0;
 
 <div class="container">
     <div class="row">
-        <div class="col"><h1>Cart</h1></div>
+        <div class="col"><h1>Cart</h1>
+            <a href="https://pangalingid.tak17koost.itmajakas.ee/">Back</a>
+        </div>
         <hr>
     </div>
     <div class="row">
@@ -63,7 +65,10 @@ $total = 0;
             <tr>
                 <td></td>
                 <td></td>
-                <td><?php echo $total; ?></td>
+                <td>Total: <?php echo $total; ?>
+                    <br>
+                    <a href="https://pangalingid.tak17koost.itmajakas.ee/pay.php">Pay</a>
+                </td>
                 <td></td>
                 <td></td>
             </tr>

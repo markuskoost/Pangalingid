@@ -21,7 +21,7 @@ require_once 'autoload.php';
 <div class="container">
     <div class="row">
         <div class="col"><h1>Products</h1>
-            <div align="left"><a href="https://pangalingid.tak17koost.itmajakas.ee/cart.php">Cart</a></div>
+            <a href="https://pangalingid.tak17koost.itmajakas.ee/cart.php">Cart</a>
         </div>
         <hr>
     </div>
