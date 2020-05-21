@@ -19,29 +19,19 @@ $total = 0;
     <title>Hello, world!</title>
 </head>
 <body>
-
-<div class="container">
-    <div class="row">
-        <div class="col"><h1>Cart</h1>
-            <form action="https://pangalingid.tak17koost.itmajakas.ee/">
-                <button type="submit" value="Back to products" class="btn btn-secondary"><-Back</button>
-            </form>
-            <br>
-        </div>
-        <hr>
+<form action="https://pangalingid.tak17koost.itmajakas.ee/cart.php">
+    <br>
+    <div class="col-md-3 mb-3">
+        <button type="submit" value="Go to cart" class="btn btn-secondary"><- Back</button>
     </div>
-    <div class="row">
-        <div class="col"><?php echo message(); ?></div>
-    </div>
-    <div class="row">
-
+</form>
+<form class="form-group">
+    <div class="col-md-3 mb-3">
         <table class="table">
             <tr>
                 <th>Name</th>
                 <th>Amount</th>
                 <th>Sum</th>
-                <th>Update</th>
-                <th>Delete</th>
             </tr>
             <?php if (!empty($cart)) : foreach ($cart as $item) { ?>
 
@@ -54,35 +44,43 @@ $total = 0;
                     <input type="hidden" name="product" value="<?php echo $item['id']; ?>">
                     <tr>
                         <td><?php echo $item['name']; ?></td>
-                        <td><input name="amount" class="form-control" value="<?php echo $item['amount']; ?>"></td>
+                        <td><?php echo $item['amount']; ?></td>
                         <td><?php echo $price; ?></td>
-                        <td>
-                            <button name="update" value="update" class="btn btn-primary">Update</button>
-                        </td>
-                        <td>
-                            <button name="delete" value="delete" class="btn btn-danger">Delete</button>
-                        </td>
                     </tr>
                 </form>
             <?php } endif; ?>
             <tr>
-                <td></td>
-                <td></td>
-                <td>Total: <?php echo $total; ?>
-                    <br>
-                    <form action="https://pangalingid.tak17koost.itmajakas.ee/checkout.php">
-                        <button type="submit" value="Go to checkout" class="btn btn-primary">Checkout</button>
-                    </form>
-                </td>
+                <td>Total: <?php echo $total; ?></td>
                 <td></td>
                 <td></td>
             </tr>
         </table>
     </div>
+</form>
+<form class="form-group" method="post" action="payment-option.php">
+    <div class="col-md-3 mb-3">
+        <label for="validationTooltip01">First Name</label>
+        <input type="text" name="firstName" class="form-control" id="validationDefault01">
 
-    <?php print_r($_SESSION['cart']); ?>
-</div>
+        <label for="validationTooltip02">Last Name</label>
+        <input type="text" name="lastName" class="form-control" id="validationDefault02">
 
+        <label for="validationTooltip05">E-mail</label>
+        <input type="text" name="email" class="form-control" id="validationDefault03">
+
+        <label for="validationTooltip03">Phone number</label>
+        <input type="text" name="number" class="form-control" id="validationDefault04">
+
+        <label for="validationTooltip04">Payment Option</label>
+        <select name="paymentOption" class="custom-select" id="validationDefault05">
+            <option selected disabled value="">Choose...</option>
+            <option name="SEB" value="SEB">SEB</option>
+            <option name="SWED" value="SWED">SWED</option>
+        </select>
+        <hr>
+        <button class="btn btn-primary" name="submit" type="submit">Pay</button>
+    </div>
+</form>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

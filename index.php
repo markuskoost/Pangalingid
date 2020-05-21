@@ -21,7 +21,10 @@ require_once 'autoload.php';
 <div class="container">
     <div class="row">
         <div class="col"><h1>Products</h1>
-            <a href="https://pangalingid.tak17koost.itmajakas.ee/cart.php">Cart</a>
+            <form action="https://pangalingid.tak17koost.itmajakas.ee/cart.php">
+                <button type="submit" value="Go to cart" class="btn btn-primary">🛒 Cart</button>
+            </form>
+            <br>
         </div>
         <hr>
     </div>
