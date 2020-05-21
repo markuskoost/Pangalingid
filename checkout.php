@@ -71,6 +71,8 @@ $total = 0;
         <label for="validationTooltip03">Phone number</label>
         <input type="text" name="number" class="form-control" id="validationDefault04">
 
+        <input type="hidden" name="total" class="form-control" id="validationDefault04" value="<?php echo $total; ?>">
+
         <label for="validationTooltip04">Payment Option</label>
         <select name="paymentOption" class="custom-select" id="validationDefault05">
             <option selected disabled value="">Choose...</option>
