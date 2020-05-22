@@ -64,19 +64,19 @@ $total = 0;
                         </td>
                     </tr>
                 </form>
-            <?php } endif; ?>
-            <tr>
-                <td></td>
-                <td></td>
-                <td>Total: <?php echo $total; ?>
-                    <br>
-                    <form action="https://pangalingid.tak17koost.itmajakas.ee/checkout.php">
-                        <button type="submit" value="Go to checkout" class="btn btn-primary">Checkout</button>
-                    </form>
-                </td>
-                <td></td>
-                <td></td>
-            </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Total: <?php echo $total; ?>
+                        <br>
+                        <form action="https://pangalingid.tak17koost.itmajakas.ee/checkout.php">
+                            <button type="submit" value="Go to checkout" class="btn btn-primary">Checkout</button>
+                        </form>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            <?php } else: echo '<div class="alert alert-warning" role="alert">Cart is empty!</div>'; endif; ?>
         </table>
     </div>
 

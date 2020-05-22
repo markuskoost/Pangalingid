@@ -57,24 +57,24 @@ $total = 0;
         </table>
     </div>
 </form>
-<form class="form-group" method="post" action="payment-option.php">
+<form class="needs-validation" method="post" action="payment-option.php" required>
     <div class="col-md-3 mb-3">
         <label for="validationTooltip01">First Name</label>
-        <input type="text" name="firstName" class="form-control" id="validationDefault01">
+        <input type="text" name="firstName" class="form-control" id="validationDefault01" required>
 
         <label for="validationTooltip02">Last Name</label>
-        <input type="text" name="lastName" class="form-control" id="validationDefault02">
+        <input type="text" name="lastName" class="form-control" id="validationDefault02" required>
 
         <label for="validationTooltip05">E-mail</label>
-        <input type="text" name="email" class="form-control" id="validationDefault03">
+        <input type="text" name="email" class="form-control" id="validationDefault03" required>
 
         <label for="validationTooltip03">Phone number</label>
-        <input type="text" name="number" class="form-control" id="validationDefault04">
+        <input type="text" name="number" class="form-control" id="validationDefault04" required>
 
         <input type="hidden" name="total" class="form-control" id="validationDefault04" value="<?php echo $total; ?>">
 
         <label for="validationTooltip04">Payment Option</label>
-        <select name="paymentOption" class="custom-select" id="validationDefault05">
+        <select name="paymentOption" class="custom-select" id="validationDefault05" required>
             <option selected disabled value="">Choose...</option>
             <option name="SEB" value="SEB">SEB</option>
             <option name="SWED" value="SWED">SWED</option>

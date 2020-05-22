@@ -65,8 +65,8 @@ $fields = array(
         "VK_REF"         => "1234561",
         "VK_LANG"        => "EST",
         "VK_MSG"         => "Torso Tiger",
-        "VK_RETURN"      => "http://localhost:8080/project/Ou76SIW1m6LPHdvF?payment_action=success",
-        "VK_CANCEL"      => "http://localhost:8080/project/Ou76SIW1m6LPHdvF?payment_action=cancel",
+        "VK_RETURN"      => "https://pangalingid.tak17koost.itmajakas.ee/payment-successful.php/?payment_action=success",
+        "VK_CANCEL"      => "https://pangalingid.tak17koost.itmajakas.ee/payment-canceled.php/?payment_action=cancel",
         "VK_DATETIME"    => "2020-05-21T17:27:05+0300",
         "VK_ENCODING"    => "utf-8",
 );
