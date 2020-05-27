@@ -36,7 +36,7 @@ require_once 'autoload.php';
         <?php if (!empty($products)) : foreach ($products as $product) { ?>
             <div class="col-6">
                 <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="<?php echo $product['image']?>" width="300" height="270" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $product['name']; ?></h5>
                         <p class="card-text"><?php echo $product['description']; ?></p>
@@ -48,8 +48,6 @@ require_once 'autoload.php';
             </div>
         <?php } endif; ?>
     </div>
-
-    <?php print_r($_SESSION['cart']); ?>
 </div>
 
 <!-- Optional JavaScript -->

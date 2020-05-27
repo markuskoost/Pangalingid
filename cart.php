@@ -79,8 +79,6 @@ $total = 0;
             <?php } else: echo '<div class="alert alert-warning" role="alert">Cart is empty!</div>'; endif; ?>
         </table>
     </div>
-
-    <?php print_r($_SESSION['cart']); ?>
 </div>
 
 <!-- Optional JavaScript -->
